@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<style>
+    .navBar{
+    width: 50%;
+    height: 75px;
+    display: flex;
+    margin-left: 25%;
+    margin-bottom:2%;
+    margin-top:4%;
+    justify-content: space-around;
+    align-items: center;
+    border-top: solid 1px;
+    color: white;
+    }
+    
+    .navLogo{ 
+    height:100%;
+    }
+    .navButton{
+        border:none;
+        font-size: 16px;
+        color:rgb(217,235,236);
+        background-color: rgba(2,2,2,0);
+    }
+    .navButton:hover{
+        border:none;
+        font-size: 16px;
+        color:white;
+        background-color: rgba(2,2,2,0);
+    }
+</style>
+    <nav class="navBar">
+        <img class='navLogo' src="https://upload.wikimedia.org/wikipedia/en/c/c1/Risk_of_Rain_2.jpg">
+        <a href="{{path('home')}}"><button class='navButton'>Home</button></a></li>
+		<a href=""><button class='navButton'>Monsters</button></a>
+		<a href=""><button class='navButton'>Biome</button></a>
+		<a href=""><button class='navButton'>Items</button></a>
+    </nav>
 </html>

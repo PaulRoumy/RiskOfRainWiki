@@ -1,0 +1,37 @@
+{% include 'base.html.twig' %}
+
+
+{% block body %}
+<style>
+body{
+        background:#000000 url(https://www.gamespot.com/a/uploads/original/1578/15789366/3755535-el6tt24wmaa0gjp.jpg);}
+    .containt{
+        display: flex;
+        position:relative;
+        left:15%;
+        background-color:white;
+        width:70%;
+    }
+    .pagePres{
+        border-style: solid;
+        border-width: 1px;
+        border-color: red;
+        width:35%;
+    }
+    #rorimg{
+        height:35%;
+    }
+    h3{
+        text-align: center;
+    }
+</style>
+<div class='containt'>
+    <div class='pagePres'>
+    <img id='rorimg'src='https://pbs.twimg.com/ad_img/1463203952447655939/Jpxdgiyd?format=png&name=900x900'>
+    <h3>
+    Welcome to the Unofficial Risk of Rain 2 Wiki</h3>
+    </div>
+</div>
+
+
+{% endblock %}
