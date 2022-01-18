@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html>
-<style>
-    .navBar{
-    width: 50%;
-    height: 75px;
-    display: flex;
-    margin-left: 25%;
-    margin-bottom:2%;
-    margin-top:4%;
-    justify-content: space-around;
-    align-items: center;
-    border-top: solid 1px;
-    color: white;
-    }
-    
-    .navLogo{ 
-    height:100%;
-    }
-    .navButton{
-        border:none;
-        font-size: 16px;
-        color:rgb(217,235,236);
-        background-color: rgba(2,2,2,0);
-    }
-    .navButton:hover{
-        border:none;
-        font-size: 16px;
-        color:white;
-        background-color: rgba(2,2,2,0);
-    }
-</style>
-    <nav class="navBar">
-        <img class='navLogo' src="https://upload.wikimedia.org/wikipedia/en/c/c1/Risk_of_Rain_2.jpg">
-        <a href="{{path('home')}}"><button class='navButton'>Home</button></a></li>
-		<a href=""><button class='navButton'>Monsters</button></a>
-		<a href=""><button class='navButton'>Biome</button></a>
-		<a href=""><button class='navButton'>Items</button></a>
-    </nav>
-</html>
+	<style>
+		.navBar {
+			width: 50%;
+			height: 75px;
+			display: flex;
+			margin-left: 25%;
+			margin-bottom: 2%;
+			margin-top: 4%;
+			justify-content: space-around;
+			align-items: center;
+			border-top: solid 1px;
+			color: white;
+		}
+
+		.navLogo {
+			height: 100%;
+		}
+		.navButton {
+			border: none;
+			font-size: 16px;
+			color: rgb(217, 235, 236);
+			background-color: rgba(2, 2, 2, 0);
+		}
+		.navButton:hover {
+			border: none;
+			font-size: 16px;
+			color: white;
+			background-color: rgba(2, 2, 2, 0);
+		}
+	</style>
+	<nav class="navBar">
+		<img class='navLogo' src="https://upload.wikimedia.org/wikipedia/en/c/c1/Risk_of_Rain_2.jpg">
+		<a href="{{path('home')}}">
+			<button class='navButton'>Home</button>
+		</a>
+	</li>
+	<a href="{{path('monstre')}}">
+		<button class='navButton'>Monsters</button>
+	</a>
+	<a href="">
+		<button class='navButton'>Biome</button>
+	</a>
+	<a href="">
+		<button class='navButton'>Items</button>
+	</a>
+</html></nav></html>
