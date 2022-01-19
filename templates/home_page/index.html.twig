@@ -56,6 +56,9 @@
         border-radius: 25px;
         background: rgba(35,62,119, 0.5);
         color: rgb(190, 190, 190);
+        width:60%;
+        position:relative;
+        left:10%;
     }
     .survivant{
         border-bottom-style: solid;
@@ -82,7 +85,7 @@
     incarne un des différant survivant et se rendra compte des nombreux systèmes et ennemis qui habite PétrichorV.
     </div>
     <div class='listeSurvivant'>
-        <button style='grid-column:2; grid-row:1;'><h3>Survivant</h3></button>
+        <div style='grid-column:2; grid-row:1;'><a href="{{path('artefact')}}"><button style='grid-column:2; grid-row:1;'><h3>Survivant</h3></button></a></div>
         <div  class='survivant'  style='grid-column:1/4; grid-row:2;'>
         <p>Les Survivant sont les personages que le joueur peut controller. Il existe actuellement 11 personages jouable plus 
         1 secret. Chaque survivant possede des capacités uniques, permettant de nombreux style de gameplay allant du corps à corps
@@ -90,7 +93,8 @@
         (execpter le secret) possede des compétances alternatives déblocable par des defis in-game.
         </p>
         </div>
-        <button style='grid-column:2; grid-row:3;'><h3>Artefact</h3></button>
+        <div style='grid-column:2; grid-row:3;'><a href="{{path('artefact')}}"><button style='grid-column:2; grid-row:3;'><h3>Artefact</h3></button></a></div>
+        
         <div class='artefact' style='grid-column:1/4; grid-row:4;'>
         <p>Les Artefacts sont des modificateur de partie qui permet de conplexifier les runs (parties) en effectuant divers 
         changement sur le joueur, ses objet, les monstres et les environements. Pour les débloqués il faut accéder à un monde secret 
