@@ -4,43 +4,61 @@
 <style>
 		body {
 			background-size: contain;
-			background: #000000 url('https://gamertweak.com/wp-content/uploads/2020/05/risk-of-rain-2-artifacts-level-1280x720.jpg') no-repeat;
+			background: #000000 url('https://images6.alphacoders.com/120/thumbbig-1202423.webp') no-repeat fixed center top;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;
 		}
 		.section {
 			justify-content: space-around;
 			background-color: rgba(0, 0 , 0, 0.8);
 			color: rgb(190, 190, 190);
-			border-radius: 50px;
+			border-radius: 10px;
 			text-align: center;
 			margin-left: 50px;
 			margin-right: 50px;
 		}
 		table{
 			position: relative;
-			left: 25%;
+
 			border-collapse: collapse;
 		}
 		td, tr{
 			margin: 10%;
 			border: 1px solid silver;
 		}
+		p{
+			text-align: left;
+		}
+		.code{
+			background: rgba(0, 0 , 0, 0.6);
+			color:rgb(190, 190, 190) ;
+			resize: none;
+			border: none;
+		}
 	</style>
 	<div class='section'>
 		<div class='pagePres'>
 			<h1>Les Artefacts </h1>
+
+			<div style="border-bottom: solid rgb(77,77,77);">
+				<h2>Déverrouillage</h2>
+			</div>
+	<div><p> Pour déverrouiller un artefact, le joueur doit saisir un code d'artefact dans le Jardin Celeste à l'aide du
+			générateur de composés sous la carte, puis interagir avec l'ordinateur portable. Un portail vers la
+			prison de cet artefact dans l'Abri du Rampard apparaîtra.</p>
+		<p>Les entrées du générateur composé défileront dans l'ordre : carré, cercle, triangle, losange (■ ● ▲ ♦).</p>
+	</div>
 			<table>
 				<tr>
-					<td>Logo</td>
+
 					<td>Nom</td>
 					<td>Description</td>
 					<td>Code</td>
 				</tr>
 			{% for artefact in artefacts %}
 				<tr>
-					<td>Logo</td>
+
 					<td>{{ artefact.name }}</td>
 					<td>{{ artefact.description }}</td>
-					<td>Code</td>
+					<td><textarea class="code" rows="3" cols="4" disabled>{{ artefact.code }}</textarea></td>
 				</tr>
 
 			{% endfor %}
