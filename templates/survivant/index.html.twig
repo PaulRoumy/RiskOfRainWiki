@@ -1,0 +1,64 @@
+{% include 'base.html.twig' %}
+
+{% block body %}
+	<style>
+		body {
+			background: #000000 url('https://www.gamingscan.com/wp-content/uploads / 2021/03/Risk-of-Rain-2-Tier-List-1200x900.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.section {
+			justify-content: space-around;
+			background-color: rgba(0, 0 , 0, 0.8);
+			color: rgb(190, 190, 190);
+			border-radius: 10px;
+			text-align: center;
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+		table {
+			position: relative;
+
+			border-collapse: collapse;
+		}
+		td,
+		tr {
+			margin: 10%;
+			border: 1px solid silver;
+		}
+		p {
+			text-align: left;
+		}
+		.déverrouillage {
+			background: rgba(0, 0 , 0, 0.6);
+			color: rgb(190, 190, 190);
+			resize: none;
+			border: none;
+		}
+	</style>
+	<div class='section'>
+		<div class='pagePres'>
+			<h1>Les Survivants</h1>
+
+			<div style="border-bottom: solid rgb(77,77,77);"></div>
+			<div>
+				<p></p>
+			</div>
+			<table>
+				<tr>
+
+					<td>Nom</td>
+					<td>Description</td>
+					<td>déverrouillage</td>
+				</tr>
+				{% for survivant in survivants %}
+					<tr>
+
+						<td>{{ survivant.name }}</td>
+						<td>{{ survivant.description }}</td>
+						<td>{{ survivant.deverrouillage }}</td>
+					</tr>
+
+				{% endfor %}
+			</table>
+		{% endblock %}
