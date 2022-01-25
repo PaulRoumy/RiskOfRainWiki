@@ -16,6 +16,16 @@
 			margin-left: 50px;
 			margin-right: 50px;
 		}
+		table {
+			position: relative;
+
+			border-collapse: collapse;
+		}
+		td,
+		tr {
+			margin: 10%;
+			border: 1px solid silver;
+		}
 	</style>
 	<div class='section'>
 		<div class='pagePres'>
@@ -23,80 +33,110 @@
 			<p>Les monstres sont des entités hostiles et constituent la principale menace pour les survivants . Il y a 35 monstres de 4 types différents actuellement dans le jeu, et des informations à leur sujet peuvent être consultées dans le journal de bord.</P>
 			<p>
 				Les boss (à ne pas confondre avec Teleporter Boss ) sont une catégorie de monstres avec une santé et des dégâts beaucoup plus élevés, 
-																												et sont en tant que tels plus menaçants pour le joueur que la plupart des monstres ordinaires.</p>
+				et sont en tant que tels plus menaçants pour le joueur que la plupart des monstres ordinaires.</p>
 			<p>Tout monstre donné a 1% de chances de laisser tomber son Monster Log si un joueur du groupe n'a pas encore acquis cette entrée. Si le monstre est un boss téléporteur,
-																												 un boss spécial ou une horde multiple, cette chance d'apparition est de 3 % à la place. 
-																												 Ces chances de chute sont affectées par le Trèfle à 57 feuilles et/ou Pureté du joueur qui bat le monstre.</p>
+			un boss spécial ou une horde multiple, cette chance d'apparition est de 3 % à la place. 
+			Ces chances de chute sont affectées par le Trèfle à 57 feuilles et/ou Pureté du joueur qui bat le monstre.</p>
 			<h2>
 				Les variantes d'élite des ennemis</h2>
 			<p>Avant d'entrer dans les statistiques et les caractéristiques de chaque ennemi, vous devez savoir que chaque ennemi a une chance d'apparaître en tant que variante Elite.
-											 Ces élites sont beaucoup plus coriaces que la normale et peuvent s'appliquer à la fois aux ennemis réguliers et aux boss. 
-											 La probabilité qu'un ennemi se reproduise en tant qu'élite, de manière assez prévisible, commence faible mais augmente plus vous survivez longtemps dans une course.</p>
+				Ces élites sont beaucoup plus coriaces que la normale et peuvent s'appliquer à la fois aux ennemis réguliers et aux boss. 
+				La probabilité qu'un ennemi se reproduise en tant qu'élite, de manière assez prévisible, commence faible mais augmente plus vous survivez longtemps dans une course.</p>
 
 			<p>Il existe trois types d'élites que vous pouvez rencontrer, et chacune est reconnaissable à sa couleur distincte (voir ci-dessous). 
-											 Quelle que soit la variante, toutes les élites bénéficient de 4,7 fois la santé et de 2 fois les dégâts de leur homologue habituel, elles ne doivent donc pas être prises à la légère, 
-											 en particulier dans les dernières étapes d'une course, lorsque les ennemis deviennent de toute façon assez costauds.</p>
+				Quelle que soit la variante, toutes les élites bénéficient de 4,7 fois la santé et de 2 fois les dégâts de leur homologue habituel, elles ne doivent donc pas être prises à la légère, 
+				en particulier dans les dernières étapes d'une course, lorsque les ennemis deviennent de toute façon assez costauds.</p>
 
 			<p>Les élites flamboyantes sont colorées en rouge, laissent derrière elles une traînée de feu qui endommage les joueurs qui entrent en contact avec elle, et leurs attaques peuvent enflammer le joueur pour 4 ticks des dégâts de l'élite.
-								          Les élites glaciaires sont de couleur blanche et leurs attaques ralentissent considérablement le joueur à chaque coup. Ils exploseront peu de temps après la mort, alors assurez-vous d'être hors de portée avant que cela ne se produise.
-								Les élites en surcharge sont colorées en bleu et ont 50 % de leur santé convertie en boucliers qui se rechargent rapidement ; et leurs attaques infligent une explosion électrique à chaque coup.</p>
+			 Les élites glaciaires sont de couleur blanche et leurs attaques ralentissent considérablement le joueur à chaque coup. Ils exploseront peu de temps après la mort, alors assurez-vous d'être hors de portée avant que cela ne se produise.
+			Les élites en surcharge sont colorées en bleu et ont 50 % de leur santé convertie en boucliers qui se rechargent rapidement ; et leurs attaques infligent une explosion électrique à chaque coup.</p>
 		</div>
-		<h3>Les monstres réguliers</h3>
+		<h3>Les monstres commun</h3>
 
-		<img src="https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/c/c4/Alloy_Vulture_-_Logbook_Model.jpg/revision/latest?cb=20200909171033">
-		<a href="">Vautour en Alliage</a>
-		<a href="">Scarabée</a>
-		<a href="">Garde de scarabée</a>
-		<a href="">Bison d'Amérique</a>
-		<a href="">Engin en laiton</a>
-		<a href="">Templier d'argile</a>
-		<a href="">Ancien Lémurien</a>
-		<a href="">Feu follet supérieur</a>
-		<a href="">Bernard-l'ermite</a>
-		<a href="">Lutin</a>
-		<a href="">Méduse</a>
-		<a href="">Lémurien</a>
-		<a href="">Feu follet inférieur</a>
-		<a href="">Chimère Lunaire (Exploseur)</a>
-		<a href="">Chimère Lunaire (Golem)</a>
-		<a href="">Chimère Lunaire (Wisp)</a>
-		<a href="">Mini Champignon</a>
-		<a href="">Parent</a>
-		<a href="">Sonde solus</a>
-		<a href="">Golem de pierre</a>
-		<a href="">Saccageur du Vide</a>
+		<table>
+				<tr>
+					<td>Nom</td>
+					<td>Description</td>
+					<td>Code</td>
+				</tr>
+			{% for monstre in monstreC %}
+				<tr>
 
-		<h3>Les Patrons</h3>
+					<td>{{ monstre.nom }}</td>
+					<td>{{ monstre.description }}</td>
+				    <td>{{ monstre.environnement }}</td>
+					<td>{{ monstre.logo }}</td>
 
-		<a href="">Reine des scarabées</a>
-		<a href="">Marcheur des dunes d'argile</a>
-		<a href="">Grand-parent</a>
-		<a href="">Bosquet</a>
-		<a href="">Suzerain diablotin</a>
-		<a href="">Ver de magma</a>
-		<a href="">Ver de surcharge</a>
-		<a href="">Charognard</a>
-		<a href="">Unité de contrôle Solus</a>
-		<a href="">Titan de pierre</a>
-		<a href="">Vagabond errant</a>
+				</tr>
+
+			{% endfor %}
+			</table>
+
+		<h3>Les Boss</h3>
+
+		<table>
+				<tr>
+					<td>Nom</td>
+					<td>Description</td>
+					<td>Code</td>
+				</tr>
+			{% for monstre in monstreB %}
+				<tr>
+
+					<td>{{ monstre.nom }}</td>
+					<td>{{ monstre.description }}</td>
+				    <td>{{ monstre.environnement }}</td>
+					<td>{{ monstre.logo }}</td>
+
+				</tr>
+
+			{% endfor %}
+			</table>
 
 		<h3>Les boss spéciaux</h3>
 
 		<p>Ces boss n'apparaissent pas naturellement mais ont des exigences particulières pour le faire.
 		</p>
 
-		<a href="">Unité de culte en alliage</a>
-		<a href="">Reliquaire d'artefacts</a>
-		<a href="">Aurélionite</a>
-		<a href="">Mithrix</a>
-		<a href="">Charognard tordu</a>
+	<table>
+				<tr>
+					<td>Nom</td>
+					<td>Description</td>
+					<td>Code</td>
+				</tr>
+			{% for monstre in monstreBS %}
+				<tr>
+
+					<td>{{ monstre.nom }}</td>
+					<td>{{ monstre.description }}</td>
+				    <td>{{ monstre.environnement }}</td>
+					<td>{{ monstre.logo }}</td>
+
+				</tr>
+
+			{% endfor %}
+			</table>
 
 		<h3>Les autres</h3>
 
-		<a href="">Aurélionite (Allié) Graine d'Halcyon</a>
-		<a href="">Garde du scarabée (allié) Glande de la reine</a>
-		<a href="">Oursin malachite des élites malachites</a>
-		<a href="">Triton</a>
+		<table>
+				<tr>
+					<td>Nom</td>
+					<td>Description</td>
+					<td>Code</td>
+				</tr>
+			{% for monstre in monstreA %}
+				<tr>
+
+					<td>{{ monstre.nom }}</td>
+					<td>{{ monstre.description }}</td>
+				    <td>{{ monstre.environnement }}</td>
+					<td>{{ monstre.logo }}</td>
+
+				</tr>
+
+			{% endfor %}
+			</table>
 
 	</div>
 </div>{% endblock %}
