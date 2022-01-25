@@ -1,0 +1,224 @@
+{% include 'base.html.twig' %}
+
+
+{% block body %}
+    <style>
+        body {
+            background-size: contain;
+            background: #000000 url('https://images6.alphacoders.com/120/thumbbig-1202423.webp') no-repeat fixed center top;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;
+        }
+        .section {
+            justify-content: space-around;
+            background-color: rgba(0, 0 , 0, 0.8);
+            color: rgb(190, 190, 190);
+            border-radius: 10px;
+            text-align: center;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        table{
+            position: relative;
+
+            border-collapse: collapse;
+        }
+        td, tr{
+            margin: 10%;
+            border: 1px solid silver;
+        }
+        p{
+            text-align: left;
+        }
+        .code{
+            background: rgba(0, 0 , 0, 0.6);
+            color:rgb(190, 190, 190) ;
+            resize: none;
+            border: none;
+        }
+        table{
+            margin: 5%;
+        }
+    </style>
+    <div class='section'>
+    <div class='pagePres'>
+    <h1>Les Objets </h1>
+
+
+    <div><p> Les objets sont des objets de collection spéciaux qui apparaissent pendant le jeu.
+
+            Les joueurs peuvent ramasser des objets pour obtenir un effet spécial en fonction du type d'objet dont il s'agit. L'icône de chaque élément a également une bordure colorée pour indiquer sa rareté :<br><br>
+
+            <span>Blanc (Commun)</span> <br>
+            <span style="color: green"> Vert (Peu fréquent)</span><br>
+            <span style="color: red"> Rouge (Légendaire)</span><br>
+            <span style="color: yellow"> Jaune (Boss / Planète)</span><br>
+            <span style="color: blue"> Bleu (objets lunaires / équipement)</span><br>
+            <span style="color: orange"> Orange (Équipement)</span><br><br>
+            Certains objets doivent être déverrouillés en complétant un défi pour apparaître dans le jeu. Ramassez un objet pour déverrouiller son entrée dans le journal de bord.<br>
+
+            Il y a actuellement 102 objets et 31 équipements dans le jeu. Vous pouvez trouver une liste de tous ces éléments ci-dessous :</p>
+    </div>
+    <div><strong>Objets Communs :</strong> <br><br>
+        Les objets communs sont probablement les premiers objets qu'un joueur obtiendra dans le jeu. Ils peuvent être extrêmement puissants en grande quantité et ne doivent donc pas être sous-estimés.
+        Il y a 25 éléments communs.</div>
+    <table>
+        <tr>
+
+        </tr>
+        {% for item in communItems %}
+            <tr>
+                {% if item.isEquipement == 0 %}
+                <td>
+                    {%  if (item.logo != '')%}
+                    <img  src="{{ item.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                    {% endif %}
+                    <br>{{ item.name }}</td>
+                <td>{{ item.description }}</td>
+                {% endif %}
+            </tr>
+
+        {% endfor %}
+    </table>
+    <br>
+    <div><strong style="color: green">Objets Rares :</strong> <br>
+        Les objets peu communs, comme leur nom l'indique, sont plus rares et peut-être plus puissants. Il y a 26 objets peu communs.
+    </div>
+
+    <table>
+        <tr>
+
+        </tr>
+        {% for item in rareItems %}
+            <tr>
+                {% if item.isEquipement == 0 %}
+                    <td>
+                        {%  if (item.logo != '')%}
+                            <img  src="{{ item.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                        {% endif %}
+                        <br>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                {% endif %}
+            </tr>
+
+        {% endfor %}
+    </table>
+
+    <br>
+    <div><strong style="color: red">Objets Légendaires :</strong> <br>
+        Les objets légendaires sont extrêmement rares dans le jeu, avec environ 1 % de chances d'être obtenus d'un petit coffre . Il existe cependant des moyens plus efficaces d'obtenir des objets légendaires. Il y a 22 objets légendaires.
+    </div>
+    <table>
+        <tr>
+
+        </tr>
+        {% for item in legendaireItems %}
+            <tr>
+                {% if item.isEquipement == 0 %}
+                    <td>
+                        {%  if (item.logo != '')%}
+                            <img  src="{{ item.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                        {% endif %}
+                        <br>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                {% endif %}
+            </tr>
+
+        {% endfor %}
+    </table>
+    <br>
+    <div><strong style="color: yellow">Objets de Boss :</strong> <br>
+        Les objets de boss (également connus sous le nom d' objets planétaires ou d' objets trouvés sur le terrain ) sont des objets rares qui peuvent tomber en récompense pour avoir vaincu des boss téléporteurs , chacun représentant une attaque de signature ou une caractéristique du boss correspondant. Ceux- ci ne peuvent pas être obtenus à partir de coffres. Chaque objet de boss ne peut tomber que si son boss respectif est apparu en tant que boss du téléporteur ( par exemple, Coeur Titanesque ne peut tomber que si le boss du téléporteur était un titan de pierre ). Il y a 15 objets Boss.
+    </div>
+
+    <table>
+        <tr>
+
+        </tr>
+        {% for item in bossItems %}
+            <tr>
+                {% if item.isEquipement == 0 %}
+                    <td>
+                        {%  if (item.logo != '')%}
+                            <img  src="{{ item.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                        {% endif %}
+                        <br>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                {% endif %}
+            </tr>
+
+        {% endfor %}
+    </table>
+    <br>
+    <div><strong style="color: blue">Objets Lunaires :</strong> <br>
+
+        Les objets lunaires sont un nouveau niveau d'objets introduits dans Risk of Rain 2. Ils se caractérisent par leurs puissantes capacités, au prix d'inconvénients considérables. Les coffres et autres objets interactifs de butin communs ne laisseront pas tomber d'objets lunaires; les seuls moyens de les obtenir sont à partir de capsules lunaires que l' on trouve rarement dans les environnements ou du bazar entre les temps . Les deux méthodes nécessitent de dépenser des pièces lunaires , par opposition à de l' or . Il y a 14 objets lunaires.
+    </div>
+
+    <table>
+        <tr>
+
+        </tr>
+        {% for item in lunaireItems %}
+            <tr>
+                {% if item.isEquipement == 0 %}
+                    <td>
+                        {%  if (item.logo != '')%}
+                            <img  src="{{ item.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                        {% endif %}
+                        <br>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                {% endif %}
+            </tr>
+
+        {% endfor %}
+    </table>
+    <br>
+    <div style="border-bottom: solid 1px; border-color: rgb(77, 77, 77);">
+        Articles actifs
+    </div>
+    <div><strong>Équipement</strong> <br>
+
+
+        Un objet actif (« équipement ») ne fournit souvent aucun avantage à moins qu'il ne soit utilisé par le joueur (comme il le ferait avec l'une de ses compétences), ce qui fournit un effet puissant mais entraîne une période de recharge relativement longue pendant laquelle il (ou d'autres éléments actifs) ne peut pas être activé. Un joueur ne peut normalement détenir qu'un seul objet actif à la fois ; s'il essaie de ramasser un objet actif alors qu'il en détient déjà un, il l'échangera contre le nouveau à la place. Il existe 21 équipements de série.
+        </div>
+    <table>
+        <tr>
+
+        </tr>
+        {% for item in communItems %}
+            <tr>
+                {% if item.isEquipement == 1 %}
+                    <td>
+                        {%  if (item.logo != '')%}
+                            <img  src="{{ item.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                        {% endif %}
+                        <br>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                {% endif %}
+            </tr>
+
+        {% endfor %}
+    </table>
+    <br>
+    <div><strong>Équipement lunaire</strong> <br>
+        Semblable aux objets lunaires passifs, l'équipement lunaire ne peut être obtenu qu'à partir des modules lunaires ou du bazar entre les temps en échange de pièces lunaires, le tout avec une grande force et des inconvénients considérables. Il y a 4 équipements lunaires.
+    </div>
+    <table>
+        <tr>
+
+        </tr>
+        {% for item in lunaireItems %}
+            <tr>
+                {% if item.isEquipement == 1 %}
+                    <td>
+                        {%  if (item.logo != '')%}
+                            <img  src="{{ item.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                        {% endif %}
+                        <br>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                {% endif %}
+            </tr>
+
+        {% endfor %}
+    </table>
+
+{% endblock %}
