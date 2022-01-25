@@ -18,7 +18,7 @@
 		}
 		table {
 			position: relative;
-
+            margin: 5%;
 			border-collapse: collapse;
 		}
 		td,
@@ -55,17 +55,20 @@
 
 		<table>
 				<tr>
+				    <td>Logo</td> 
 					<td>Nom</td>
 					<td>Description</td>
-					<td>Code</td>
+					<td>environnement</td>
 				</tr>
 			{% for monstre in monstreC %}
 				<tr>
-
+                <td>
+                    {%  if (monstre.logo != '')%}
+                    <img  src="{{ monstre.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                    {% endif %}
 					<td>{{ monstre.nom }}</td>
 					<td>{{ monstre.description }}</td>
 				    <td>{{ monstre.environnement }}</td>
-					<td>{{ monstre.logo }}</td>
 
 				</tr>
 
@@ -76,13 +79,16 @@
 
 		<table>
 				<tr>
+				    <td>Logo</td> 
 					<td>Nom</td>
 					<td>Description</td>
-					<td>Code</td>
+					<td>environnement</td>
 				</tr>
 			{% for monstre in monstreB %}
 				<tr>
-
+                    {%  if (monstre.logo != '')%}
+                    <img  src="{{ monstre.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                    {% endif %}
 					<td>{{ monstre.nom }}</td>
 					<td>{{ monstre.description }}</td>
 				    <td>{{ monstre.environnement }}</td>
@@ -100,13 +106,16 @@
 
 	<table>
 				<tr>
+				    <td>Logo</td> 
 					<td>Nom</td>
 					<td>Description</td>
-					<td>Code</td>
+					<td>environnement</td>
 				</tr>
 			{% for monstre in monstreBS %}
 				<tr>
-
+                    {%  if (monstre.logo != '')%}
+                    <img  src="{{ monstre.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                    {% endif %}
 					<td>{{ monstre.nom }}</td>
 					<td>{{ monstre.description }}</td>
 				    <td>{{ monstre.environnement }}</td>
@@ -121,13 +130,16 @@
 
 		<table>
 				<tr>
+				    <td>Logo</td> 
 					<td>Nom</td>
 					<td>Description</td>
-					<td>Code</td>
+					<td>environnement</td>
 				</tr>
 			{% for monstre in monstreA %}
 				<tr>
-
+                    {%  if (monstre.logo != '')%}
+                    <img  src="{{ monstre.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                    {% endif %}
 					<td>{{ monstre.nom }}</td>
 					<td>{{ monstre.description }}</td>
 				    <td>{{ monstre.environnement }}</td>
