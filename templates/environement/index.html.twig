@@ -42,7 +42,7 @@
     <div>
         <br>
        {% for zone in zone1 %}
-           <a href=""> <img  src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+           <a href="{{ path('zone',{'id': zone.id}) }}"> <img  src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
            <br>
                {{ zone.name }}
                <br>
@@ -57,7 +57,7 @@
     <div>
         <br>
         {% for zone in zone2 %}
-            <a href=""> <img  src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+            <a href="{{ path('zone',{'id': zone.id}) }}"> <img  src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
                 <br>
                 {{ zone.name }}
                 <br>
@@ -72,7 +72,7 @@
     <div>
         <br>
         {% for zone in zone3 %}
-            <a href=""> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+            <a href="{{ path('zone',{'id': zone.id}) }}"> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
                 <br>
                 {{ zone.name }}
                 <br>
@@ -86,7 +86,7 @@
     <div>
         <br>
         {% for zone in zone4 %}
-            <a href=""> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+            <a href="{{ path('zone',{'id': zone.id}) }}"> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
                 <br>
                 {{ zone.name }}
                 <br>
@@ -101,7 +101,7 @@
     <div>
         <br>
         {% for zone in zone5 %}
-            <a href=""> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+            <a href="{{ path('zone',{'id': zone.id}) }}"> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
                 <br>
                 {{ zone.name }}
                 <br>
@@ -115,7 +115,7 @@
     <div>
         <br>
         {% for zone in zone6 %}
-            <a href=""> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+            <a href="{{ path('zone',{'id': zone.id}) }}"> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
                 <br>
                 {{ zone.name }}
                 <br>
@@ -129,7 +129,7 @@
     <div>
         <br>
         {% for zone in zoneSecret %}
-            <a href=""> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+            <a href="{{ path('zone',{'id': zone.id}) }}"> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
                 <br>
                 {{ zone.name }}
                 <br>

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\EnvironementRepository;
+use phpDocumentor\Reflection\Types\Integer;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -29,5 +30,12 @@ class EnvironementController extends AbstractController
                 'zoneSecret' => $zoneSecret,
             ]
         );
+    }
+
+    #[Route('/environement/{id}', name: 'zone')]
+    public function zoneId(EnvironementRepository $environementRepository, $id):Response
+    {
+        $zone = $environementRepository->findOneBy(['id'=>$id]);
+        return $this->render('environement/id.html.twig',['zone'=>$zone]);
     }
 }
