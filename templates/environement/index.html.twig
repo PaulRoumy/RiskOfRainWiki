@@ -1,0 +1,141 @@
+{% include 'base.html.twig' %}
+
+
+
+{% block body %}
+
+<style>
+    body {
+        background: #000000 url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQosxZ6E82V4-urNVcHzgJa4aJAfgEwmXEydg&usqp=CAU')no-repeat fixed center top;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;
+
+
+
+    }
+    .section {
+        justify-content: space-around;
+        background-color: rgba(0, 0 , 0, 0.8);
+        color: rgb(190, 190, 190);
+        border-radius: 10px;
+        text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    table {
+        position: relative;
+
+        border-collapse: collapse;
+    }
+    </style>
+<div class="section">
+    <div style="border-bottom:solid; border-width: 1px; border-color: rgb(77, 77, 77);">
+        <h3>Environnements</h3>
+    </div>
+    <p style="margin-left: 5%;  margin-right: 5%;">Les environnements sont les scènes jouables dans Risk of Rain 2 . Les déplacements entre les environnements principaux se font via le téléporteur . Il existe actuellement neuf environnements principaux à explorer. Après avoir terminé le cinquième environnement, le défi Déjà Vu ? est déverrouillé et la séquence d'étapes se répète. Il n'est pas possible de visiter plusieurs environnements d'une étape en une seule boucle.
+        <br><br>
+        Chaque environnement a trois variations d'étape ou plus, la plupart des changements étant des éléments uniques, comme une porte ouverte pour révéler des zones étendues. Les environnements peuvent contenir des secrets et des trésors cachés.
+        <br><br>
+        Les royaumes cachés sont des environnements non accessibles via des boucles de scène. Ces environnements ont généralement des exigences qui doivent être remplies pour être accessibles.</p>
+
+    <div style="border-bottom:solid; border-width: 1px; border-color: rgb(77, 77, 77);">
+        <h3>Première étape</h3>
+    </div>
+    <div>
+        <br>
+       {% for zone in zone1 %}
+           <a href=""> <img  src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+           <br>
+               {{ zone.name }}
+               <br>
+           </a>
+           <br>
+       {% endfor %}
+    </div>
+
+    <div style="border-bottom:solid; border-width: 1px; border-color: rgb(77, 77, 77);">
+        <h3>Deuxièmes étape</h3>
+    </div>
+    <div>
+        <br>
+        {% for zone in zone2 %}
+            <a href=""> <img  src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                <br>
+                {{ zone.name }}
+                <br>
+            </a>
+            <br>
+        {% endfor %}
+    </div>
+
+    <div style="border-bottom:solid; border-width: 1px; border-color: rgb(77, 77, 77);">
+        <h3>Troisième étape</h3>
+    </div>
+    <div>
+        <br>
+        {% for zone in zone3 %}
+            <a href=""> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                <br>
+                {{ zone.name }}
+                <br>
+            </a>
+            <br>
+        {% endfor %}
+    </div>
+    <div style="border-bottom:solid; border-width: 1px; border-color: rgb(77, 77, 77);">
+        <h3>Quatrièmes étape</h3>
+    </div>
+    <div>
+        <br>
+        {% for zone in zone4 %}
+            <a href=""> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                <br>
+                {{ zone.name }}
+                <br>
+            </a>
+            <br>
+        {% endfor %}
+    </div>
+
+    <div style="border-bottom:solid; border-width: 1px; border-color: rgb(77, 77, 77);">
+        <h3>Cinquièmes étape</h3>
+    </div>
+    <div>
+        <br>
+        {% for zone in zone5 %}
+            <a href=""> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                <br>
+                {{ zone.name }}
+                <br>
+            </a>
+            <br>
+        {% endfor %}
+    </div>
+    <div style="border-bottom:solid; border-width: 1px; border-color: rgb(77, 77, 77);">
+        <h3>Sixièmes étape</h3>
+    </div>
+    <div>
+        <br>
+        {% for zone in zone6 %}
+            <a href=""> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                <br>
+                {{ zone.name }}
+                <br>
+            </a>
+            <br>
+        {% endfor %}
+    </div>
+    <div style="border-bottom:solid; border-width: 1px; border-color: rgb(77, 77, 77);">
+        <h3>Royaumes Secrets</h3>
+    </div>
+    <div>
+        <br>
+        {% for zone in zoneSecret %}
+            <a href=""> <img src="{{zone.image }}" decoding="async" width="50%" height="50%"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                <br>
+                {{ zone.name }}
+                <br>
+            </a>
+            <br>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
