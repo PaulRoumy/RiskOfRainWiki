@@ -47,15 +47,18 @@
 			</div>
 			<table>
 				<tr>
-
+                    <td>Logo</td>
 					<td>Nom</td>
 					<td>Description</td>
 					<td>déverrouillage</td>
 				</tr>
 				{% for survivant in survivants %}
 					<tr>
-
-						<td>{{ survivant.name }}</td>
+					<td>
+                    {%  if (survivant.logo != '')%}
+                    <img  src="{{ survivant.logo }}" decoding="async" width="120" height="80"  class=" ls-is-cached lazyloaded" data-file-width="256" data-file-height="256">
+                    {% endif %}						
+					    <td>{{ survivant.name }}</td>
 						<td>{{ survivant.description }}</td>
 						<td>{{ survivant.deverrouillage }}</td>
 					</tr>
